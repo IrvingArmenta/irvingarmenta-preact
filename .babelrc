@@ -1,0 +1,10 @@
+{
+  "sourceMaps": true,
+  "presets": [
+    ["@babel/preset-env"]
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["transform-react-jsx", { "pragma": "h" }]
+  ]
+}
