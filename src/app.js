@@ -8,7 +8,6 @@ import Footer from './layout/footer';
 // pages
 import About from './pages/about';
 import Home from './pages/home';
-
 import Error404 from './pages/error404';
 
 const testing = "TEST";
