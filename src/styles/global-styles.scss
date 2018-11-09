@@ -1,3 +1,9 @@
+// reset
 @import "normalize";
+
+// mixins
+@import "mixins/rem",
+        "mixins/mq";
+
 @import "general";
 @import "layout";
