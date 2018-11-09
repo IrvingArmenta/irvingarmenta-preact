@@ -1,6 +1,6 @@
 import { h, Component, render } from 'preact'
 import App from './src/app'
-const root = document.getElementById('app');
+const root = document.getElementById('root');
 
 render(<App />,root);
 

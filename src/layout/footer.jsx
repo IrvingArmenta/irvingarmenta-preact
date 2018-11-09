@@ -1,13 +1,13 @@
-import { h, Component} from "preact"
+import { h, Component} from "preact";
 
 class Footer extends Component {
   render() {
     return(
-      <footer>
-        "footer"
+      <footer id="appFooter" className="app__footer">
+        - footer -
       </footer>
-    )
+    );
   }
-};
+}
 
 export default Footer;
