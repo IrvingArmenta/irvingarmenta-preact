@@ -1,4 +1,4 @@
-import { h, Component} from "preact"
+import { h, Component} from "preact";
 
 class Home extends Component {
   render() {
@@ -8,6 +8,6 @@ class Home extends Component {
       </div>
     )
   }
-};
+}
 
 export default Home;

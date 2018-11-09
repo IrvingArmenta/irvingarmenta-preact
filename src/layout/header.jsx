@@ -1,12 +1,12 @@
-import { h, Component} from "preact"
+import { h, Component} from "preact";
 
 class Header extends Component {
   render() {
     return(
-      <header>
-      "Header"
+      <header id="appHeader" className="app__header">
+      - header -
       </header>
-    )
+    );
   }
 }
 

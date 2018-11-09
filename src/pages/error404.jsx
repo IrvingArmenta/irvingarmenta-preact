@@ -1,4 +1,4 @@
-import { h, Component} from "preact"
+import { h, Component} from "preact";
 
 const Error404 = ({type, url}) => (
   <div>
