@@ -4,5 +4,7 @@ const root = document.getElementById("root");
 
 render(<App />,root);
 
-// react developer tools
-require("preact/debug");
+if (process.env.NODE_ENV === 'development') {
+  // react developer tools
+  require("preact/debug");
+}

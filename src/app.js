@@ -14,7 +14,9 @@ import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Error404 from "./pages/error404";
 
+
 class App extends Component {
+
   render() {
     return(
       <section>
@@ -23,6 +25,7 @@ class App extends Component {
           <Router>
             <Home path="/" />
             <About path="/about" />
+            <Contact path="/contact" />
             <Error404 type="404" default />
           </Router>
           </div>
