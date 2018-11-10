@@ -6,7 +6,7 @@ class About extends Component {
       <div>
       - About -
       </div>
-    )
+    );
   }
 }
 

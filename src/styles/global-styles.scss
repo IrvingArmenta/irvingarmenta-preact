@@ -5,5 +5,9 @@
 @import "mixins/rem",
         "mixins/mq";
 
+// general styles
 @import "general";
 @import "layout";
+
+// UI
+@import "ui/nav";
