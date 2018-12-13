@@ -40,6 +40,7 @@
     "preact-motion": "^1.1.0",
     "preact-redux": "^2.0.3",
     "preact-router": "^2.6.1",
+    "preact-webfont-loader": "0.0.3",
     "redux": "^4.0.1"
   }
 }
