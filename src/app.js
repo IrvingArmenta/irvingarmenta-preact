@@ -16,7 +16,6 @@ import Error404 from "./pages/error404";
 
 
 class App extends Component {
-
   render() {
     return(
       <section>

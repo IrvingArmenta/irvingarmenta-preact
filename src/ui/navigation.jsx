@@ -8,15 +8,14 @@ const appRoutes = [
 ];
 
 class Navigation extends Component {
-
   render() {
     return(
-      <nav className="nav">
-        <ul>
+      <nav className="nav" aria-label="Irving Armenta Navigation">
+        <ul aria-label="Irving Armenta Navigation" role="menubar">
         {
           appRoutes.map((link,i) => (
             <li key={`nav-li-${i}`}>
-              <Link activeClassName="current" href={link.linkPath}>{link.title}</Link>
+              <Link tabindex="0" role="menuitem" activeClassName="current" href={link.linkPath}>{link.title}</Link>
             </li>
           ))
         }
@@ -24,6 +23,6 @@ class Navigation extends Component {
       </nav>
     );
   }
-}
+};
 
 export default Navigation;

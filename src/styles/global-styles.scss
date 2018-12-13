@@ -1,6 +1,9 @@
 // reset
 @import "normalize";
 
+// abstracts
+@import "abstract/variables";
+
 // mixins
 @import "mixins/rem",
         "mixins/mq";
