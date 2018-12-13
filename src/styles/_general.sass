@@ -1,0 +1,14 @@
+$rem-baseline: 10px
+html
+  @include rem-baseline(80%)
+  height: 100%
+  @include mq($from: "tablet")
+    @include rem-baseline
+
+a
+  text-decoration: none
+  &:focus
+    outline: 0
+  &:active,
+  &:visited
+    color: inherit

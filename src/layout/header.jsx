@@ -1,12 +1,16 @@
-import { h, Component} from "preact"
+import { h, Component} from "preact";
+
+// ui
+import Navigation from "../ui/navigation";
 
 class Header extends Component {
   render() {
     return(
-      <header>
-      "Header"
+      <header id="appHeader" className="app__header">
+      - header -
+      <Navigation location={window.location.pathname} />
       </header>
-    )
+    );
   }
 }
 

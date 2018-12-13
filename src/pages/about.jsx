@@ -1,4 +1,4 @@
-import { h, Component} from "preact"
+import { h, Component} from "preact";
 
 class About extends Component {
   render() {
@@ -6,8 +6,8 @@ class About extends Component {
       <div>
       - About -
       </div>
-    )
+    );
   }
-};
+}
 
 export default About;

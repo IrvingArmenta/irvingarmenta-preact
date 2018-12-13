@@ -1,0 +1,29 @@
+.app
+  height: 100%
+  font-size: rem(14px)
+
+  &__main
+    height: 100%
+    > section
+      height: inherit
+      display: flex
+      flex-direction: column
+
+  &__content
+    flex: 1 0 auto
+    width: 100%
+    align-items: center
+    justify-content: center
+    display: flex
+
+  &__header,
+  &__footer
+    flex: none
+    text-align: center
+    padding: 8px 0
+
+  &__header
+    border-bottom: 1px solid #dadada
+
+  &__footer
+    border-top: 1px solid #dadada

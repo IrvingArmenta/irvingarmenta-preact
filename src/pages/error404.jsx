@@ -1,6 +1,6 @@
-import { h, Component} from "preact"
+import { h, Component} from "preact";
 
-const Error404 = ({type, url}) => (
+const Error404 = ({type}) => (
   <div>
    <span>- Not Found -</span><br />
    <span>Error {type}</span>
