@@ -1,9 +1,37 @@
 $rem-baseline: 10px
 html
-  @include rem-baseline(80%)
+  +rem-baseline(80%)
   height: 100%
-  @include mq($from: "tablet")
-    @include rem-baseline
+  +mq($from: "tablet")
+    +rem-baseline
+  body
+    transition: opacity 300ms ease-in-out
+    font-family: $general-font
+    font-weight: 300
+    opacity: 0
+  &[lang="ja"]
+    body
+      font-weight: 400
+    body,
+    .heading
+      font-family: $ja-font
+  &.wf-loading
+    body
+      opacity: 0
+  &.wf-active
+    body
+      opacity: 1
+
+h1,
+h2,
+h3,
+h4,
+h5,
+  margin-top: 0
+
+.heading
+  font-weight: 700
+  font-family: $headings-font
 
 a
   text-decoration: none
@@ -12,3 +40,16 @@ a
   &:active,
   &:visited
     color: inherit
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+button
+  &:focus,
+  &:active
+    outline: 0
+
+button.active
+  color: $white
+  background-color: $black

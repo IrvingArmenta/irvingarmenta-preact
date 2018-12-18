@@ -1,12 +1,15 @@
 import { h, Component} from "preact";
-import jap from '../lang/ja';
-
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    const {langJson} = this.props;
     return(
       <div>
-        {jap.greet}
+        <h1 className="heading">{langJson.greet}</h1>
       </div>
     );
   }

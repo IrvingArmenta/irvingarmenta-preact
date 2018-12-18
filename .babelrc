@@ -1,15 +1,11 @@
 {
   "sourceMaps": true,
   "presets": [
-    ["@babel/preset-env", {
-        "targets": {
-          "ie": "11"
-        }
-      }
-    ]
+    ["@babel/preset-env"]
   ],
   "plugins": [
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties"],
     ["transform-react-jsx", { "pragma": "h" }]
   ]
 }
