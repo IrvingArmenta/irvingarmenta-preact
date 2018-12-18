@@ -1,4 +1,14 @@
 {
   "langCode":"ja",
-  "greet" : "こんにちは"
+  "greet" : "こんにちは",
+  "navigation" : {
+    "home" : "ホーム",
+    "about" : "イルビンとは",
+    "contact" : "お問い合わせ"
+  },
+  "langButtons":{
+    "en":"英語",
+    "es":"スペイン語",
+    "ja":"日本語"
+  }
 }

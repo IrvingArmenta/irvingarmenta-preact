@@ -1,4 +1,14 @@
 {
   "langCode":"es",
-  "greet" : "Hola"
+  "greet" : "Hola",
+  "navigation" : {
+    "home" : "Home",
+    "about" : "Acerca de",
+    "contact" : "Contacto"
+  },
+  "langButtons":{
+    "en":"Ingles",
+    "es":"Espanol",
+    "ja":"Japones"
+  }
 }

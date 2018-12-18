@@ -1,13 +1,13 @@
 import { h, Component} from "preact";
+import Helmet from 'preact-helmet';
 
-class Contact extends Component {
-  render() {
-    return(
-      <div>
-      - Contact -
-      </div>
-    );
-  }
+const Contact = ({langJson}) => {
+  return(
+    <div>
+      <Helmet title="Contact"/>
+      <h1 className="heading">- Contact -</h1>
+    </div>
+  );
 }
 
 export default Contact;
