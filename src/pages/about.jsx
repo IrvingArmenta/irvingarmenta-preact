@@ -9,7 +9,7 @@ class About extends Component {
   componentDidMount = (props) => {
     this.state = {
       reveal: this.props.reveal
-    }
+    };
   }
 
   render() {

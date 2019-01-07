@@ -39,7 +39,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     //cookies.erase('selectedLang')
-    const userLanguage = sessionStorage.getItem('selectedLang') ? sessionStorage.getItem('selectedLang') : this.props.browserLang;
+    const userLanguage = sessionStorage.getItem("selectedLang") ? sessionStorage.getItem("selectedLang") : this.props.browserLang;
 
     this.state = {
       language: userLanguage,
@@ -57,8 +57,8 @@ class App extends Component {
 
   onRouteChange = event => {
     setTimeout(() => {
-      this.setState({reveal: true})
-    }, 150)
+      this.setState({reveal: true});
+    }, 150);
   }
 
   render() {
@@ -69,7 +69,7 @@ class App extends Component {
     return(
       <section>
         <Helmet
-          htmlAttributes={{lang: siteLanguage, amp: undefined, style: "opacity: 1"}}
+          htmlAttributes={{lang: siteLanguage, style: "opacity: 1"}}
           titleAttributes={{itemprop: "name", lang: siteLanguage}}
           title="Frontend"
           titleTemplate="%s | Irving Armenta"

@@ -15,7 +15,7 @@ class languageButtons extends Component {
   onLangButtonClick(language) {
     this.props.setPageLanguage(language)
     //cookies.set('selectedLang',language)
-    sessionStorage.setItem('selectedLang', language)
+    sessionStorage.setItem("selectedLang", language);
   }
 
   activeClass = (lang) => {
