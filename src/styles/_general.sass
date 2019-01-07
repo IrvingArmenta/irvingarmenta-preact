@@ -1,40 +1,52 @@
 $rem-baseline: 10px
 html
+  transition: opacity 300ms ease-in-out
+  opacity: 0
   +rem-baseline(80%)
   height: 100%
   +mq($from: "tablet")
     +rem-baseline
   body
-    transition: opacity 300ms ease-in-out
     font-family: $general-font
     font-weight: 300
-    opacity: 0
   &[lang="ja"]
+    p
+      line-height: 1.8
+      color: lighten($black, 10%)
+      text-align: justify
+      word-break: break-all
     body
-      font-weight: 400
+      font-size: rem(13px)
     body,
     .heading
       font-family: $ja-font
-  &.wf-loading
-    body
-      opacity: 0
-  &.wf-active
-    body
-      opacity: 1
+
+body
+  color: $black
 
 h1,
 h2,
 h3,
 h4,
 h5,
+p
   margin-top: 0
+
+
+p
+  line-height: 1.5
+  &:last-child
+    margin-bottom: 0
 
 .heading
   font-weight: 700
   font-family: $headings-font
+  letter-spacing: rem(1px)
+  margin-bottom: rem(10px)
 
 a
   text-decoration: none
+  color: inherit
   &:focus
     outline: 0
   &:active,
@@ -45,7 +57,10 @@ ul
   list-style: none
   margin: 0
   padding: 0
+
 button
+  border: 0
+  cursor: pointer
   &:focus,
   &:active
     outline: 0
@@ -53,3 +68,29 @@ button
 button.active
   color: $white
   background-color: $black
+
+.v-text
+  writing-mode: vertical-rl
+  text-combine-upright: digits 2
+  text-transform: full-width
+  text-combine-upright: all
+
+.not-loaded
+  opacity: 0
+
+.animated
+  -webkit-animation-duration: 500ms
+  animation-duration: 500ms
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    transform: translate3d(0, 12px, 0)
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+.fadeInUp
+  animation-name: fadeInUp

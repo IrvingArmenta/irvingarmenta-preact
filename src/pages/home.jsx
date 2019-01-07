@@ -5,11 +5,18 @@ class Home extends Component {
     super(props);
   }
 
+  componentDidMount = (props) => {
+    this.state = {
+      reveal: this.props.reveal
+    }
+  }
+
   render() {
     const {langJson} = this.props;
+    let revealed = this.state.reveal ? "fadeInUp animated" : "not-loaded";
     return(
-      <div>
-        <h1 className="heading">{langJson.greet}</h1>
+      <div className={revealed}>
+        <h1 className="heading">- {langJson.greet} -</h1>
       </div>
     );
   }
