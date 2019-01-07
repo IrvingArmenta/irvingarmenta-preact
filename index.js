@@ -4,8 +4,6 @@ import App from "./src/app";
 import WebfontLoader from 'preact-webfont-loader';
 import getBrowserLanguage from 'get-browser-language';
 
-const root = document.getElementById("root");
-
 const webFontConfig = {
   google: {
     families: ['Lato:300','Heebo:700']
@@ -27,11 +25,13 @@ const language = browserLang => {
   }
 }
 
+const appLang = language(getBrowserLanguage());
+
 render(
   <WebfontLoader config={webFontConfig}>
-    <App browserLang={language(getBrowserLanguage())} />
+    <App browserLang={appLang} />
   </WebfontLoader>
-  ,root
+  ,document.getElementById("root")
 );
 
 if (process.env.NODE_ENV === "development") {

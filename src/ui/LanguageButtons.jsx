@@ -1,4 +1,5 @@
 import { h, Component} from "preact";
+import cookies from "browser-cookies";
 
 const langButtons = [
   {langCode:"en"},
@@ -13,6 +14,8 @@ class languageButtons extends Component {
 
   onLangButtonClick(language) {
     this.props.setPageLanguage(language)
+    //cookies.set('selectedLang',language)
+    sessionStorage.setItem("selectedLang", language);
   }
 
   activeClass = (lang) => {
@@ -22,7 +25,7 @@ class languageButtons extends Component {
   render() {
     const {langJson} = this.props;
     return (
-      <nav aria-label="Irving Armenta - language change navigation">
+      <nav aria-label="Irving Armenta - language change navigation" >
         <ul className="lang-nav" aria-label="Irving Armenta - language change navigation" role="menubar">
           {
             langButtons.map((button,i) => (
