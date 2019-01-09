@@ -18,17 +18,18 @@
     "developer",
     "preact",
     "preact-router",
-    "preact-redux",
     "poi",
-    "babel"
+    "babel",
+    "javascript",
+    "application"
   ],
   "author": "Irving Armenta",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.2.0",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/plugin-proposal-decorators": "^7.2.3",
+    "@babel/preset-env": "^7.2.3",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.0.5",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "node-sass": "^4.11.0",
@@ -36,11 +37,13 @@
     "sass-loader": "^7.1.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "browser-cookies": "^1.2.0",
+    "get-browser-language": "^1.0.0",
     "preact": "^8.4.2",
-    "preact-motion": "^1.1.0",
-    "preact-redux": "^2.0.3",
+    "preact-helmet": "^4.0.0-alpha-3",
+    "preact-portal": "^1.1.3",
     "preact-router": "^2.6.1",
-    "preact-webfont-loader": "0.0.3",
-    "redux": "^4.0.1"
+    "preact-webfont-loader": "0.0.3"
   }
 }
