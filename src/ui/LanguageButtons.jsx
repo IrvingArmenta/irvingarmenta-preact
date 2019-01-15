@@ -18,7 +18,7 @@ class languageButtons extends Component {
     sessionStorage.setItem("selectedLang", language);
   }
 
-  activeClass = (lang) => {
+  activeClass = lang => {
     return this.props.currentLang === lang ? 'active' : ''
   }
 
