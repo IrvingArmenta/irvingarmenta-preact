@@ -1,7 +1,7 @@
 $rem-baseline: 10px
 html
-  transition: opacity 300ms ease-in-out
-  opacity: 0
+  //transition: opacity 300ms ease-in-out
+  //opacity: 0
   +rem-baseline(80%)
   height: 100%
   +mq($from: "tablet")
@@ -94,3 +94,6 @@ button.active
 
 .fadeInUp
   animation-name: fadeInUp
+
+.disabled
+  pointer-events: none

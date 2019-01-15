@@ -38,7 +38,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "between.js": "^0.1.2-fix.2",
     "browser-cookies": "^1.2.0",
+    "easing-functions": "^1.0.1",
     "get-browser-language": "^1.0.0",
     "preact": "^8.4.2",
     "preact-helmet": "^4.0.0-alpha-3",

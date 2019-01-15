@@ -6,7 +6,7 @@ import getBrowserLanguage from 'get-browser-language';
 
 const webFontConfig = {
   google: {
-    families: ['Lato:300','Heebo:700']
+    families: ["Lato:300","Heebo:700"]
   }
 };
 
@@ -14,14 +14,12 @@ const webFontConfig = {
 // inner options I set up. default language is "en" - English
 const language = browserLang => {
   let lang = browserLang.substring(0,2);
-  if (lang === 'en') {
-    return 'en';
-  } else if (lang === 'es') {
-    return 'es';
-  } else if (lang === 'ja') {
-    return 'ja';
+ if (lang === "es") {
+    return "es";
+  } else if (lang === "ja") {
+    return "ja";
   } else {
-    return 'en';
+    return "en";
   }
 }
 

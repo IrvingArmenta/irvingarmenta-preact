@@ -2,6 +2,8 @@ import { h, Component } from "preact";
 import Router from "preact-router";
 import Helmet from "preact-helmet";
 import cookies from "browser-cookies";
+import Between from "between.js";
+import Easing from 'easing-functions';
 
 // global styles
 import "./styles/global-styles.scss";
@@ -17,18 +19,18 @@ import Contact from "./pages/contact";
 import Error404 from "./pages/error404";
 
 // json languages
-import es from "./lang/es.json";
-import en from "./lang/en.json";
-import ja from "./lang/ja.json";
+import esJson from "./lang/es.json";
+import enJson from "./lang/en.json";
+import jaJson from "./lang/ja.json";
 
 // Function for select the correct json object
 const langSelection = language => {
-  if(language === 'es') {
-    return es
-  } else if(language === 'ja') {
-    return ja
+  if(language === "es") {
+    return esJson
+  } else if(language === "ja") {
+    return jaJson
   } else {
-    return en
+    return enJson
   }
 }
 
@@ -44,15 +46,35 @@ class App extends Component {
     this.state = {
       language: userLanguage,
       jsonLang: langSelection(userLanguage),
-      reveal: true
+      reveal: true,
+      opacity: 0
     };
   }
 
   setPageLanguage = language => {
-    this.setState({
-      language: language,
-      jsonLang: langSelection(language),
-    });
+    const langTimeout = 400;
+    const siteHeader = document.getElementById('appHeader');
+    if(language !== this.state.language) {
+      new Between(this.state.opacity, 0).time(langTimeout)
+      .loop("bounce", 2)
+      .on("update", (value, {times}) => {
+          this.setState({
+            opacity: `${value.toFixed(2)}`
+          });
+      }).on("start", () => {
+        siteHeader.classList.add("disabled")
+        setTimeout(() => {
+          this.setState({
+            language: language,
+            jsonLang: langSelection(language),
+          });
+        },langTimeout);
+      }).on("complete", () => {
+        siteHeader.classList.remove("disabled")
+      });
+    } else {
+      return false;
+    }
   }
 
   onRouteChange = event => {
@@ -61,15 +83,24 @@ class App extends Component {
     }, 150);
   }
 
+  componentDidMount() {
+    new Between(0, 1).time(2000).easing(Between.Easing.Quintic.InOut).on('update', v => {
+      this.setState({ opacity: v.toFixed(2) });
+    });
+  }
+
   render() {
     const siteLanguage = this.state.language;
     const languageObject = this.state.jsonLang;
     const jaLangFont = siteLanguage === "ja" ? JAfont : "";
+    const sectionStyle = {
+      opacity: `${this.state.opacity}`
+    };
 
     return(
-      <section>
+      <section style={sectionStyle}>
         <Helmet
-          htmlAttributes={{lang: siteLanguage, style: "opacity: 1"}}
+          htmlAttributes={{lang: siteLanguage}}
           titleAttributes={{itemprop: "name", lang: siteLanguage}}
           title="Frontend"
           titleTemplate="%s | Irving Armenta"
