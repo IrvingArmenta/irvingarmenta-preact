@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/poi",
-    "build": "node_modules/.bin/poi build"
+    "build": "node_modules/.bin/poi build",
+    "test": "node_modules/.bin/cypress open"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,8 @@
   "author": "Irving Armenta",
   "license": "ISC",
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.2.3",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
@@ -43,6 +44,7 @@
     "easing-functions": "^1.0.1",
     "get-browser-language": "^1.0.0",
     "preact": "^8.4.2",
+    "preact-feather": "^3.2.0",
     "preact-helmet": "^4.0.0-alpha-3",
     "preact-portal": "^1.1.3",
     "preact-router": "^2.6.1",
