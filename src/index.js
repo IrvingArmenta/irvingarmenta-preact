@@ -1,13 +1,4 @@
-import './style';
-import { Component } from 'preact';
+import "./style/index.scss";
+import App from "./components/app.tsx";
 
-export default class App extends Component {
-
-	render() {
-		return (
-			<div>
-				<h1>Hello, Worldsssss!</h1>
-			</div>
-		);
-	}
-}
+export default App;
