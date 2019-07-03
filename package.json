@@ -10,7 +10,7 @@
     "build": "preact build --template src/index.html",
     "serve": "preact build && preact serve",
     "dev": "preact watch --template src/index.html",
-    "lint": "tslint --project src",
+    "lint": "tslint tsconfig.json",
     "test": "jest ./tests",
     "precommit": "lint-staged"
   },
@@ -38,9 +38,6 @@
   "devDependencies": {
     "@types/animejs": "^2.0.2",
     "@types/jest": "^23.3.10",
-    "@types/react": "^16.8.22",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-router-dom": "^4.3.4",
     "@types/webpack-env": "^1.13.9",
     "css-loader": "^1.0.1",
     "husky": "^1.2.0",
@@ -68,8 +65,7 @@
     "preact": "^8.3.1",
     "preact-compat": "^3.18.4",
     "preact-render-to-string": "^4.1.0",
-    "preact-router": "^2.6.1",
-    "react-router-dom": "^5.0.1"
+    "preact-router": "^2.6.1"
   },
   "peerDependencies": {
     "prettier": ">1.0.0",

@@ -3,6 +3,7 @@ import * as style from "./style.scss";
 
 interface Props {
     user?: string;
+    theme?: string;
 }
 
 interface State {
@@ -36,11 +37,11 @@ export default class Profile extends Component<Props, State> {
     public increment = () => {
         this.setState({ count: this.state.count + 1 });
     };
-    public render({ user }: Props, { time, count }: State) {
+    public render({ user, theme }: Props, { time, count }: State) {
         return (
             <div class={style.profile}>
                 <h1>Profile: {user}</h1>
-                <p>This is the user profile for a user named {user}.</p>
+                <p>This is the user profile for a user named {user} {theme}.</p>
 
                 <div>Current time: {new Date(time).toLocaleString()}</div>
 

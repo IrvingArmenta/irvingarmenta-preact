@@ -1,0 +1,42 @@
+@import "./modern-normalize";
+
+// main layout for app
+html {
+    display: flex;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    > #app {
+        min-height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.header,
+.footer {
+    flex-shrink: 0;
+}
+
+.main {
+    flex-grow: 1;
+    position: relative;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+    font-weight: 400;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}

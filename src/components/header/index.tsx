@@ -1,11 +1,11 @@
 import { Component, h } from "preact";
 import { Link } from "preact-router/match";
-import * as style from "./style.css";
+import * as style from "./style.scss";
 
 export default class Header extends Component {
     public render() {
         return (
-            <header class={style.header}>
+            <header class={`${style.header} header`}>
                 <h1>Preact App</h1>
                 <nav>
                     <Link activeClassName={style.active} href="/">
