@@ -1,0 +1,15 @@
+{
+    "home": {
+        "msg":"Welcome to My site"
+    },
+    "langButtons": {
+        "en": "English",
+        "es": "Spanish",
+        "ja": "Japanese"
+    },
+    "themeButtons": {
+        "dark": "dark",
+        "default": "default",
+        "pixel": "pixel"
+    }
+}

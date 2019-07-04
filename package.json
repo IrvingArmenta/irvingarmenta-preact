@@ -62,8 +62,10 @@
   },
   "dependencies": {
     "animejs": "^3.0.1",
+    "detect-browser-language": "0.0.2",
     "preact": "^8.3.1",
     "preact-compat": "^3.18.4",
+    "preact-helmet": "^4.0.0-alpha-3",
     "preact-render-to-string": "^4.1.0",
     "preact-router": "^2.6.1"
   },

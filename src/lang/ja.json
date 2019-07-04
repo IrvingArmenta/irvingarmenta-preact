@@ -1,0 +1,15 @@
+{
+    "home": {
+        "msg":"私のサイトへよこそう"
+    },
+    "langButtons": {
+        "en": "英語",
+        "es": "スペイン語",
+        "ja": "日本語"
+    },
+    "themeButtons": {
+        "dark": "ダーク",
+        "default": "デフォルト",
+        "pixel": "ピクセル"
+    }
+}

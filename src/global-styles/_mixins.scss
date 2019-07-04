@@ -1,3 +1,7 @@
 @mixin transition($duration: 150ms) {
     transition: all $duration ease-in-out;
 }
+
+@function spacing($spacing, $valueType: px) {
+    @return #{$spacing * 8}$valueType;
+}
