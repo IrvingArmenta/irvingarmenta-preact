@@ -40,3 +40,19 @@ body {
 * {
     box-sizing: border-box;
 }
+
+.animation-floating {
+    animation: floating 3s infinite ease-in-out;
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(0px) translate3d(0, 0, 0);
+    }
+    65% {
+        transform: translateY(6px) translate3d(0, 0, 0);
+    }
+    to {
+        transform: translateY(-0px) translate3d(0, 0, 0);
+    }
+}
