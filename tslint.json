@@ -7,7 +7,16 @@
         "tslint-config-prettier"
     ],
     "rules": {
-        "interface-name": [true, "never-prefix"],
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
+        "max-line-length": [
+            true,
+            {
+                "limit": 120
+            }
+        ],
         "object-literal-sort-keys": false,
         "no-empty-interface": false,
         "no-submodule-imports": false,
@@ -16,7 +25,10 @@
         "no-empty": false,
         "radix": false,
         "jsx-no-multiline-js": false,
-        "only-arrow-functions": [true, "allow-declarations"],
+        "only-arrow-functions": [
+            true,
+            "allow-declarations"
+        ],
         "no-invalid-this": true,
         "ban-comma-operator": true,
         "no-arg": true,
@@ -33,20 +45,34 @@
         "no-unexpected-multiline": true,
         "valid-jsdoc": true,
         "valid-typeof": true,
-        "early-exit": { "severity": "warning" },
-        "no-collapsible-if": { "severity": "warning" },
-        "no-unnecessary-else": { "severity": "warning" },
-        "no-accessor-recursion": { "severity": "warning" },
+        "early-exit": {
+            "severity": "warning"
+        },
+        "no-collapsible-if": {
+            "severity": "warning"
+        },
+        "no-unnecessary-else": {
+            "severity": "warning"
+        },
+        "no-accessor-recursion": {
+            "severity": "warning"
+        },
         "no-else-after-return": {
             "severity": "warning",
             "options": "allow-else-if"
         },
-        "no-return-undefined": { "severity": "warning" },
-        "no-static-this": { "severity": "warning" },
+        "no-return-undefined": {
+            "severity": "warning"
+        },
+        "no-static-this": {
+            "severity": "warning"
+        },
         "no-var-before-return": {
             "severity": "warning",
             "options": "allow-destructuring"
         },
-        "prefer-const-enum": { "severity": "warning" }
+        "prefer-const-enum": {
+            "severity": "warning"
+        }
     }
 }

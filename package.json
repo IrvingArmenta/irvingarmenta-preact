@@ -10,7 +10,7 @@
     "build": "preact build --template src/index.html",
     "serve": "preact build && preact serve",
     "dev": "preact watch --template src/index.html",
-    "lint": "tslint tsconfig.json",
+    "lint": "tslint --fix -p tsconfig.json",
     "test": "jest ./tests",
     "precommit": "lint-staged"
   },

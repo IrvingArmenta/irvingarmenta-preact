@@ -2,6 +2,7 @@
 
 .selectLang {
     display: flex;
+    position: absolute;
     li {
         &:not(:last-child) {
             margin-right: spacing(2);
