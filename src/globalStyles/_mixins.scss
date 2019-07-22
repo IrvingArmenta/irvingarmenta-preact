@@ -1,0 +1,14 @@
+@mixin transition($duration: 150ms) {
+    transition: all $duration ease-in-out;
+}
+
+@function spacing($spacing, $valueType: px) {
+    @return #{$spacing * 8}$valueType;
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
