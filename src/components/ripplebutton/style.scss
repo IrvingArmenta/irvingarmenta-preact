@@ -1,5 +1,8 @@
+@import "../../globalStyles/mixins";
+@import "../../globalStyles/themes";
+
 .button {
-    background-color: #ee6e73;
+    background-color: map-deep-get($theme-colors, "dark", "primary");
     border: none;
     border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
