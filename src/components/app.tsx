@@ -13,8 +13,6 @@ import Header from "./header";
 import RippleButton from "./ripplebutton";
 import styles from './styles.scss';
 
-
-
 enum ThemeNames {
     'themeDefault',
     'themeDark',
@@ -87,6 +85,7 @@ export default class App extends Component<MainAppTypes, MainAppState> {
                         </li>
                         <li>
                             <RippleButton
+                                textButton={true}
                                 lang={language}
                                 onClick={this.changeLang}
                                 data-lang="ja">
