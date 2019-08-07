@@ -35,8 +35,8 @@ if ((module as any).hot) {
 
 const languageInitialState = sessionStorage.getItem('lang') as LangCodeTypes
     || initialLang(detectBrowserLanguage());
-const langJsonInitialState = getByBracket(LangJson, initialLang(sessionStorage.getItem('lang') 
-|| detectBrowserLanguage()));
+const langJsonInitialState = getByBracket(LangJson, initialLang(sessionStorage.getItem('lang')
+    || detectBrowserLanguage()));
 const themeInitialState = sessionStorage.getItem('theme') as ThemesType || 'themeDefault';
 
 export default class App extends Component<MainAppTypes, MainAppState> {
@@ -75,12 +75,10 @@ export default class App extends Component<MainAppTypes, MainAppState> {
                     <ul className={styles.selectLang} style={{ right: 16, top: 16 }}>
                         <li>
                             <RippleButton
-                                outline={true}
                                 lang={language}
-                                title="es"
                                 onClick={this.changeLang}
                                 data-lang="es">
-                                {langJson.langButtons.es}
+                                Espanol
                             </RippleButton>
                         </li>
                         <li>
@@ -89,15 +87,15 @@ export default class App extends Component<MainAppTypes, MainAppState> {
                                 lang={language}
                                 onClick={this.changeLang}
                                 data-lang="ja">
-                                {langJson.langButtons.ja}
+                                日本語
                             </RippleButton>
                         </li>
                         <li>
-                            <RippleButton 
-                                lang={language} 
-                                onClick={this.changeLang} 
+                            <RippleButton
+                                lang={language}
+                                onClick={this.changeLang}
                                 data-lang="en">
-                                {langJson.langButtons.en}
+                                English
                             </RippleButton>
                         </li>
                     </ul>
@@ -138,7 +136,7 @@ export default class App extends Component<MainAppTypes, MainAppState> {
 
     private changeLang = (e: MouseEvent) => {
         const clickedButton = e.currentTarget as HTMLElement;
-        const languageString = clickedButton.dataset.lang as 'es' | 'en' | 'ja';
+        const languageString = clickedButton.dataset.lang as LangCodeTypes;
 
         // save in sessionStorage
         sessionStorage.setItem('lang', languageString);

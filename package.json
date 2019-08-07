@@ -31,6 +31,7 @@
     "build/*"
   ],
   "browserslist": [
+    "ie 11",
     "> 1%",
     "IE >= 9",
     "last 2 versions"
@@ -57,7 +58,7 @@
     "tslint-consistent-codestyle": "^1.14.1",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.2.1",
+    "typescript": "^3.5.3",
     "typings-for-css-modules-loader": "^1.7.0"
   },
   "dependencies": {
@@ -67,7 +68,8 @@
     "preact-compat": "^3.18.4",
     "preact-helmet": "^4.0.0-alpha-3",
     "preact-render-to-string": "^4.1.0",
-    "preact-router": "^2.6.1"
+    "preact-router": "^2.6.1",
+    "react-app-polyfill": "^1.0.1"
   },
   "peerDependencies": {
     "prettier": ">1.0.0",

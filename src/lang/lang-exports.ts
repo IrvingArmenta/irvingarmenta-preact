@@ -2,29 +2,17 @@ import en from './en.json';
 import es from './es.json';
 import ja from './ja.json';
 
+
+
 export const LangJson = {
     en,
     es,
     ja,
 };
 
+export type LangObject = typeof en;
 export type LangCodeTypes = 'en' | 'es' | 'ja';
 
-export interface LangObject {
-    home: {
-        msg: string;
-    },
-    langButtons: {
-        en: string;
-        es: string;
-        ja: string;
-    }
-    themeButtons: {
-        pixel: string;
-        default: string;
-        dark: string;
-    }
-}
 
 /**
  * Filter the language code and setup 'en' as default in case of 'en-UK' or others

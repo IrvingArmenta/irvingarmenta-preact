@@ -16,23 +16,22 @@
     position: relative;
     overflow: hidden;
     min-width: 100px;
-    &--text {
+    &--text,
+    &--outline {
         background-color: transparent;
+    }
+    &--text {
         box-shadow: 0 0 transparent;
         color: rgb(37, 37, 37);
         @include transition();
         &:hover {
             background-color: rgba(map-deep-get($theme-colors, "dark", "primary"), 0.2);
         }
-        &:active {
-            background-color: rgba(map-deep-get($theme-colors, "dark", "primary"), 0.3);
-        }
         .ripple-effect {
             background-color: rgba(map-deep-get($theme-colors, "dark", "primary"), 0.3);
         }
     }
     &--outline {
-        background-color: transparent;
         box-shadow: 0 0 0 1px rgb(109, 109, 109);
         color: rgb(37, 37, 37);
         .ripple-effect {
