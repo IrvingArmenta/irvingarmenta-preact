@@ -2,7 +2,7 @@ import { Component, h } from "preact";
 import { ifClass } from '../../helpers/tsHelpers';
 import { LangCodeTypes } from "../../lang/lang-exports";
 import style from "./style.scss";
-const { buttonOutline, buttonRounded, button } = style;
+const { buttonOutline, buttonRounded, button, buttonText } = style;
 
 interface RippleButtonCustomProps {
     rounded?: boolean; 
@@ -13,6 +13,7 @@ interface RippleButtonCustomProps {
     theme?: string;
     lang?: LangCodeTypes;
     outline?: boolean;
+    textButton?: boolean;
 }
 
 type RippleButtonProps = RippleButtonCustomProps;
@@ -26,7 +27,8 @@ class RippleButton extends Component<RippleButtonProps> {
             onClick, 
             children, 
             theme, 
-            outline, 
+            outline,
+            textButton,
             ...rest 
         } = this.props;
         
@@ -38,6 +40,7 @@ class RippleButton extends Component<RippleButtonProps> {
                 ${button} 
                 ${ifClass(buttonOutline, outline)}
                 ${ifClass(buttonRounded, rounded)}
+                ${ifClass(buttonText, textButton)}
            `}
            {...rest}
            >
@@ -50,7 +53,7 @@ class RippleButton extends Component<RippleButtonProps> {
         const ripple = e.currentTarget as HTMLButtonElement;
         const posX = e.pageX - ripple.getBoundingClientRect().left;
         const posY = e.pageY - ripple.getBoundingClientRect().top;
-        const waveWidth = 1.5 * ripple.getBoundingClientRect().width;
+        const waveWidth = 2 * ripple.getBoundingClientRect().width;
         const divRippleEffect = document.createElement('span');
         divRippleEffect.className = style.rippleEffect;
         divRippleEffect.style.width = `${waveWidth}px`;

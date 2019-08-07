@@ -11,13 +11,33 @@
     font-size: 16px;
     font-weight: 700;
     outline: 0;
-    padding: 1.2em 1.8em;
+    padding: 0.8em;
     text-transform: uppercase;
     position: relative;
     overflow: hidden;
+    min-width: 100px;
+    &--text {
+        background-color: transparent;
+        box-shadow: 0 0 transparent;
+        color: rgb(37, 37, 37);
+        @include transition();
+        &:hover {
+            background-color: rgba(map-deep-get($theme-colors, "dark", "primary"), 0.2);
+        }
+        &:active {
+            background-color: rgba(map-deep-get($theme-colors, "dark", "primary"), 0.3);
+        }
+        .ripple-effect {
+            background-color: rgba(map-deep-get($theme-colors, "dark", "primary"), 0.3);
+        }
+    }
     &--outline {
         background-color: transparent;
-        box-shadow: 0 0 0 10px rgb(109, 109, 109);
+        box-shadow: 0 0 0 1px rgb(109, 109, 109);
+        color: rgb(37, 37, 37);
+        .ripple-effect {
+            background-color: rgba(map-deep-get($theme-colors, "dark", "primary"), 0.2);
+        }
     }
     &--rounded {
         border-radius: 50%;
@@ -28,8 +48,8 @@
     position: absolute;
     border-radius: 50%;
     opacity: 0;
-    background: rgba(255, 255, 255, 0.4);
-    animation: rippleAnimation 1.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: rgba(255, 255, 255, 0.4);
+    animation: rippleAnimation 2s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: block;
     pointer-events: none;
 }
